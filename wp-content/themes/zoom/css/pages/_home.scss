@@ -1,0 +1,1028 @@
+/*====================================
+ Hero section
+====================================*/
+.page_hero{
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+        
+    .carousel-inner{
+        img{
+            width: auto;
+
+            @include breakpoint-reverse(xx-large){
+                width: 100%;
+            }
+        }
+    }
+
+    .sr-only{
+        img{
+            @include breakpoint(mobile){
+                width: 34px;
+            }
+            
+        }
+    } 
+
+    .page_hero_background{
+        //height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        max-height: 723px;
+
+        @include breakpoint(mobile){
+            height: 117%;
+        }
+
+        .page_hero_background_image{
+            -o-object-fit: cover;
+               object-fit: cover;
+            height: 135%;
+            width: 100%;
+        }
+    }
+    .controls{
+        visibility: none;
+    }
+    .page_title{
+        background: transparent;
+        padding: 230px 3% 0 4%;
+        height: 100%;
+        width: 1000px;
+        margin: auto;
+
+        @include breakpoint(tablet){
+            width: 523px;
+            padding: 214px 3% 0 0%;
+        }
+
+        @include breakpoint(mobile){
+            padding: 169px 0% 0;
+            width: 252px;
+        }
+
+        @include breakpoint(mobile-s){
+            padding: 134px 4% 0;
+            width: 237px;
+            margin: 0 13% 0 13%;
+        }
+
+        .bg-dark{
+            @include breakpoint(mobile-s){
+                padding-left: 8px;
+            }
+        }
+    }
+
+    .cta{
+        margin-top: 59px;
+
+        @include breakpoint(mobile){
+            text-align: center;
+        }
+    }
+
+    .carousel{
+        max-height:723px;
+    }
+
+    .carousel-control-prev{
+        @include breakpoint(mobile){
+            left:10px;
+        }
+        
+    }
+
+    .carousel-control-next{
+        @include breakpoint(mobile){
+            right: 10px;
+        }
+    }
+
+    .carousel_cta{
+        padding-top: 326px;
+        padding-left: 311px;
+
+        @include breakpoint(tablet){
+            padding-left: 259px;
+        }
+
+        @include breakpoint(mobile){
+            padding-left: 15px;
+        }
+    }
+}
+
+/*====================================
+ Know us section
+====================================*/
+.knowus_section{
+    margin-top: 88px;
+    margin-left: 70px;
+    z-index: 0;
+
+    @include breakpoint-reverse(xx-large){
+        margin-top: 111px;
+    }
+
+   /*  @include breakpoint(tablet){
+        margin-top: 29px;
+    } */
+
+    @include breakpoint(mobile){
+        margin: 38px 7% 0;
+     }
+
+    @include breakpoint(mobile-s){
+        top: 501px;
+    }
+
+    .knowus_section__container{
+        background-color: #FFFFFF;
+        box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+        width: 906px;
+        padding: 44px 57px;
+
+        @include breakpoint(tablet){
+            width: 90%;
+        }
+
+        @include breakpoint(mobile){
+            width: 100%;
+            padding: 22px 19px;
+        }
+
+        p{
+            padding: 20px 20px 20px 0;
+
+            @include breakpoint(mobile){
+                padding: 6px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+
+    .cta_right, .section_title{
+      
+        @include breakpoint(mobile){
+          text-align: center;
+        }
+    }
+}
+
+/*====================================
+ How we do section
+====================================*/
+.how-we-do_section{
+    //margin-top: 547px; /* with cta*/
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 46px 156px 46px 261px;
+
+    @include breakpoint(tablet){
+        padding: 46px 83px 46px 83px;
+    }
+
+    @include breakpoint(mobile){
+        margin-top: 20px;
+        flex-direction: column;
+        padding: 16px 18px 46px 38px;
+    }
+
+    .section_title{
+        max-width: 233px;
+
+        @include breakpoint(mobile){
+            text-align: center;
+            max-width: inherit;
+        }
+    }
+
+    .aproaches{
+        margin-left: 161px;
+
+        @include breakpoint(tablet){
+            margin-left: 64px;
+        }
+
+        @include breakpoint(mobile){
+            margin-left: 0;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        h2{
+            display: flex;
+        }
+
+        p{
+            max-width: 606px;
+        }
+    }
+}
+
+/*====================================
+ Solutions section
+====================================*/
+.solutions_section{
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(mobile){
+        background-attachment: local;
+    }
+
+    .solutions_tite{
+        padding: 54px 20% 0 20%;
+        text-align: center;
+        margin-bottom: 15px;
+
+        @include breakpoint(mobile){
+            padding: 39px 7% 0 7%;
+            max-width: 320px;
+            margin: auto;
+        }
+    }
+
+    .solutions_content{
+        padding: 0.28% 8% 5%;
+        text-align: center; 
+
+        @include breakpoint(mobile){
+            padding: 5.28% 1%;
+            max-width: 320px;
+            margin: auto;
+        }
+
+        .solutions_description{
+            padding: 0 15% 0;
+
+            @include breakpoint(tablet){
+                padding: 0 5% 0;
+            }
+        }
+
+       
+        .solution_grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0;
+            margin-bottom: 50px;
+
+            @include breakpoint(mobile){
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                justify-content: center;
+            }
+
+        } 
+
+        .solution_grid__title{
+            text-align: left;
+
+            h3{
+                font-family: 'sf-semibold';
+                line-height: 30px;
+                margin-bottom: 15px;
+            }
+
+            a[aria-expanded="true"]{
+                .see-more::before{
+                    content: "-";
+                }
+            }
+    
+        }
+
+        .solution_grid__description{
+            text-align: left;
+            width: 100%;
+            padding: 33px 10% 0;
+
+            @include breakpoint(tablet){
+                padding: 20px 5% 0;
+            }
+
+            &:not(.show){
+                display: none;
+            }
+        }
+
+        .see-more{
+            display: inline-block;
+            position: relative;
+            margin-left: 10px;
+
+            &::before{
+                content: "+";
+                color: #E70055;
+                font-size: 23px;
+
+                @include breakpoint(mobile){
+                    font-size: 13px;
+                }
+                
+            }
+        }
+        
+    }
+
+      
+    .tns-nav{
+        margin-left: -9%;
+
+        @include breakpoint(mobile){
+            margin-left: -5px;
+        }
+
+        @include breakpoint(mobile-s){
+            margin-left: 0;
+        }
+    }
+
+    .tartist-tiny-slider-wrap{
+        margin-left: 50px;
+
+        @include breakpoint(mobile){
+            margin-left: 5px;
+        }
+
+        @include breakpoint(mobile-s){
+            margin-left: 0;
+        }
+    }
+
+    .tns-item{
+        padding-left: 0px;
+    }
+}
+
+/*====================================
+ Portfolio section
+====================================*/
+.portfolio_section{
+    margin: 6% 5.5%;
+
+    @include breakpoint(mobile){
+        margin: 12% 2%;
+    }
+
+    .portfolio_tite{
+        @include breakpoint(mobile){
+            text-align: center;
+        }
+    }
+
+    .portfolio_description{
+        @include breakpoint(mobile){
+            text-align: center;
+        }
+    }
+
+    .splide{
+        @include breakpoint(mobile){
+            margin-bottom: 42px;
+        }
+
+        @include breakpoint(mobile-s){
+            padding-bottom: 50px;
+            margin-bottom: 12px;
+        }
+        
+    }
+
+    .splide__slide {
+        margin: 27px 0 1% 1%;
+
+        @include breakpoint(tablet){
+            margin: 27px 0 4% 1%;
+        }
+
+        @include breakpoint(mobile){
+            margin: 27px 0 0% 1%;
+        }
+
+    }
+
+    .splide__slide__row{
+       // height: 165px !important;
+
+        @include breakpoint(mobile){
+            height: 204px !important;
+        }
+    }
+
+    .splide__slide--col{
+        max-width:353px !important;
+        margin-top: 0;
+    }
+
+    .splide__arrow{
+        top: 103% !important;
+        background: none !important;
+        opacity: 1;
+
+        @include breakpoint(mobile){
+            top: 114% !important;
+        }
+
+        @include breakpoint(mobile-s){
+            top: 88.5% !important;
+        }
+
+        svg{
+            fill: #E70055;
+        }
+    }
+
+    button:disabled.splide__arrow{
+        opacity: 0.3340541294642857 !important;  
+    }
+
+    .splide__arrow--next{
+        right: 80%;
+
+        @include breakpoint(tablet){
+            right: 72%;
+        }
+
+        @include breakpoint(mobile){
+            right: 3%;
+        }
+    
+    }
+
+    .splide__arrow--prev{
+        left: 4%;
+
+        @include breakpoint(tablet){
+            right: -3%;
+        }
+    }
+
+    .splide__pagination{
+        width: 12%;
+        bottom: -24px;
+        transform: translateX(-364%);
+
+        @include breakpoint(tablet){
+            width: 18%;
+            bottom: -18px;
+            transform: translateX(-236%);
+        }
+
+        @include breakpoint(mobile){
+            width: 85%;
+            bottom: -42px;
+            transform: translateX(-50%);
+        }
+
+        @include breakpoint(mobile-s){
+            bottom: 32px;
+        }
+    }
+
+    .splide__pagination__page{
+        border: 1px solid #E70055;
+        width: 8px;
+        height: 8px;
+        background : none;
+    }
+
+    .splide__pagination__page.is-active{
+        transform: none;
+        background-color: #E70055;
+    }
+
+    .portfolio_content__grid{
+        display: grid;
+        grid-template-columns: 353px 353px 353px;
+        grid-template-rows: 165px 165px;
+        gap: 40px 97px;
+        margin: 86px 0 5% 1%;
+
+        @include breakpoint(mobile){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 0;
+            margin: 46px 0 5% 1%;
+        }
+    }
+
+    .grid_description{
+        margin-left: 57px;
+
+        @include breakpoint(mobile){
+            margin-left: 12px;
+            margin-right: 9px;
+        }
+    }
+
+    .grid_title{
+        display: flex;
+        align-content: center;
+
+        .grid_num{
+            margin-right: 35px;
+            font-size: 20px;
+            line-height: 23.87px;
+            font-family: 'sf-light';
+
+            @include breakpoint(mobile){
+                font-size: 12px;
+                line-height: 13.87px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .cta_right{
+        text-align: right;
+        
+        @include breakpoint(mobile){
+            text-align: center;
+        }
+    }
+
+    .splide__track{
+        margin-bottom: 30px;
+
+        @include breakpoint(mobile){
+            margin-bottom: 104px;
+        }
+
+        @include breakpoint(mobile-s){
+            margin-bottom: 58px;
+        }
+    }
+
+    .grid_inner_title{
+        display: inline;
+    }
+
+}
+/*====================================
+ Environment section
+====================================*/
+.environment_section{
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 1px 0;
+    position: relative;
+
+    @include breakpoint(tablet){
+        
+    }
+
+    @include breakpoint(mobile){
+       
+    }
+
+    img{
+        position: absolute;
+        z-index: -1;
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        height: 386px;
+    }
+
+    .environment_card{
+        background-color: #FFFFFF;
+        border-radius: 7px;
+        box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+        padding: 36px 55px;
+        margin: 244px 100px 22px 400px;
+
+        @include breakpoint(tablet){
+            padding: 36px 23px;
+            margin: 244px 100px 0px 96px;
+        }
+
+        @include breakpoint(mobile){
+            padding: 17px 17px 10px;
+            margin: 221px 31px 0px 56px;
+        }
+
+        .section_title{
+            padding-right: 36px;
+
+            @include breakpoint(tablet){
+                padding-right: 0;
+
+            }
+        }
+    }
+}
+
+/*====================================
+ Tailored Solutions section
+====================================*/
+.tailored_solutions_section{
+    margin: 111px 230px 0;
+    text-align: center;
+
+    @include breakpoint(tablet){
+        margin: 111px 51px 0;
+    }
+
+    .section_title{
+        margin-bottom: 30px;
+    }
+
+    .splide__arrow{
+        display: none;
+    }
+
+    .splide__pagination{
+        display: none;
+    }
+
+    @include breakpoint(mobile){
+        margin: 91px 18px 0;
+    }
+
+    .tailored_solutions_content{
+
+        .tailored_solutions_content__grid{
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 316px 10px 316px;
+            grid-template-columns: 316px 316px 316px;
+            -ms-grid-rows: 316px 10px 316px;
+            grid-template-rows: 316px 316px;
+            gap: 10px;
+            margin-bottom: 62px;
+            margin-left: 0;
+            justify-content: center;
+
+           /*  @include breakpoint-reverse(xx-large){
+                margin-left: 17%;
+            } */
+
+            @include breakpoint(tablet){
+                grid-template-columns: 316px 316px;
+                grid-template-rows: 316px 316px 316px;
+            }
+
+            @include breakpoint(mobile){
+                display: flex;
+            }
+
+            
+            
+            .tns-item{
+                font-size: 12px;
+            }
+        
+
+            .tailored_solutions_content__grid-element{
+                border-radius: 7px;
+                padding: 67px 11px 43px 18px ;
+                
+
+                @include breakpoint(mobile){
+                    height: 50%;
+                    padding: 23px 8px 7px 12px;
+                    opacity: .5;
+                }
+
+                @include breakpoint(mobile-s){
+                    width: 60vw !important;
+                }
+
+                .grid_content{
+                    opacity: 0;
+                    transition: all 0.7s;
+                    transform: translateY(40px);
+
+                    @include breakpoint(mobile){
+                        transform: none;
+                        opacity: 1;
+                        text-align: left;
+                    }
+                }
+
+                .grid_title{
+                    transform: translateY(0px);
+                    transition: all 0.7s;
+
+                    h3{
+                        margin-top: 20px;
+                        transition: all 0.7s;
+                        font-family: 'sf-heavy';
+
+                        @include breakpoint(mobile){
+                            margin-top: 8px;
+                        }
+                    }
+
+                }
+                .grid_icon{
+                    transition: all 0.7s;
+
+                    @include breakpoint(mobile){
+                        width: 20px;
+                    }
+                }
+
+                &:hover{
+                    box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.06);
+
+                    .grid_content{
+                        opacity: 1;
+                        transform: translateY(-40px);
+                        transition-delay: 0.3s;
+
+                        @include breakpoint(mobile){
+                            transform: none;
+                        }
+                    }
+
+                    .grid_icon{
+                        opacity: 0;
+
+                        @include breakpoint(mobile){
+                            opacity: 1;
+                        }
+                    }
+
+                    .grid_title{
+                        transform: translateY(-40px);
+
+                        @include breakpoint(mobile){
+                            transform: none;
+                        }
+
+                        h3{
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                
+                &.tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active{ 
+                    opacity: 1; 
+                    box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.06);
+                }
+                
+            }
+        }
+    }
+
+    .splide__track{
+        padding-left: 28px !important;
+        padding-right: 34px !important;
+    }
+
+    .cta_solutions{
+        @include breakpoint(mobile){
+            margin-top: 20px;
+        }
+    }
+
+    .collapse {
+        &:not(.show) {
+          display: none;
+        }
+      }
+}
+
+/*====================================
+ They Trust us section
+====================================*/
+.partners_section{
+    margin-top: 185px;
+    margin-left: 80px;
+    display: flex;
+
+    .partners{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 3px;
+
+        @include breakpoint-reverse(xx-large){
+            display: flex;
+        }
+
+        @include breakpoint(tablet){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 63px 15px;
+            text-align: center;
+            margin: auto;
+        }
+
+        @include breakpoint(mobile){
+            grid-gap: 26px 15px;
+        }
+
+        @include breakpoint(mobile-s){
+            grid-gap: 26px 0;
+        }
+
+    }
+
+    @include breakpoint(tablet){
+        margin-top: 114px;
+        margin-left: 0;
+        flex-direction: column;
+        
+    }
+
+    @include breakpoint(mobile){
+        margin-top: 93px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .section_title{
+        margin-right: 0;
+
+        @include breakpoint-reverse(xx-large){
+            margin-right: 5%;
+        }
+
+
+        @include breakpoint(tablet){
+            justify-self: center;
+            margin: auto auto 39px;
+            grid-column: 1 / 3;
+        }
+
+        @include breakpoint(mobile){
+            
+            margin: auto auto 17px;
+            text-align: center;
+            
+        }
+    }
+
+    .partner_logo{
+        max-width: 267px;
+        height: 43px;
+        margin: 0 18px;
+
+        @include breakpoint(mobile){
+            max-width: 188px;
+            height: 28px;
+            margin: 7px 11px;
+        }
+
+       
+    }
+
+    .partner_logo1{
+        grid-column: 1/4;
+
+        @include breakpoint(tablet){
+            grid-column: 1/2;
+        }
+    }
+
+}
+/*==============================================
+ Tiny slider section - WIDE RANGE OF SOLUTIONS
+==============================================*/
+.tartist-tiny-slider-wrap{
+    width: 100%;
+    padding: 0;
+    margin-top: 43px;
+    cursor: -webkit-grab; 
+    cursor: grab;
+
+
+    @include breakpoint(tablet){
+        margin-left: 0px;
+    }
+
+    @include breakpoint(mobile){
+        margin-top: 0px;
+    }
+}
+
+.tartist-tiny-slider .wrap{
+    display: inline-grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    
+
+    @include breakpoint(tablet){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+.tartist-tiny-slider__item{
+    justify-content: center;
+    align-items: center;
+}
+
+.tartist-tiny-slider{
+
+    div{
+        padding-top: 33px;
+
+        &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(5) {
+            order: 1;
+        }
+
+        &:nth-of-type(5), &:nth-of-type(7) {
+            @include breakpoint(tablet){
+                order: 3;
+            }
+        }
+
+
+
+        &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6) {
+            order: 2;
+            grid-column: 1 / 4;
+
+            @include breakpoint(tablet){
+                grid-column: 1 / 3;
+            }
+        }
+
+        &:nth-of-type(6), &:nth-of-type(8){
+            @include breakpoint(tablet){
+                order: 4;
+            }
+        } 
+
+        &:nth-of-type(7), &:nth-of-type(9), &:nth-of-type(11) {
+            order: 3;
+        }
+
+        &:nth-of-type(8), &:nth-of-type(10), &:nth-of-type(12) {
+            grid-column: 1 / 4;
+            order: 4;
+
+            @include breakpoint(tablet){
+                grid-column: 1 / 3;
+            }
+        }
+
+        &:nth-of-type(3n-1){
+            padding-left: 56px;
+
+            @include breakpoint(tablet){
+                padding-left: 0;
+            }
+        }
+
+        &:nth-of-type(3n){
+            padding-left: 71px;
+
+            @include breakpoint(tablet){
+                padding-left: 0;
+            }
+        }
+
+        &:nth-of-type(1){
+            padding-left: 0 !important;
+
+            @include breakpoint(tablet){
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.tartist-tiny-slider__item > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+        object-fit: cover;
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tns-nav button{
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    border: 1px solid #E70055;
+    margin: 0 5px;
+    background-color: transparent;
+}
+
+.tns-nav button.tns-nav-active{
+    background-color:#E70055;
+}
+
+
+#accordionExample2{
+    width: calc(504%) !important;
+} 

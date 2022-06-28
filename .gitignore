@@ -1,0 +1,27 @@
+# ignore IDE
+.vscode
+.DS_Store
+themes/.DS_Store
+themes/*/.DS_Store
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore some directories inside aleia theme
+wp-content/themes/aleia/node_modules
+wp-content/themes/aleia/build
+wp-content/themes/aleia/yarn-error.log
+wp-content/themes/aleia/dist
+
+# ignore main file
+wp-config.php
+# .htaccess

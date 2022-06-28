@@ -1,0 +1,364 @@
+/*====================================
+ Hero section
+====================================*/
+.contact_page_hero{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .page_hero_background{
+        overflow: hidden;
+        width: 100%;
+        max-height: 421px;
+
+        @include breakpoint(tablet){
+            max-height: 237px;
+        }
+
+        @include breakpoint(mobile){
+            height: 274px;
+        }
+        
+        .page_hero_background_image{
+            -o-object-fit: cover;
+               object-fit: cover;
+            height: 135%;
+            width: 100%;
+        }
+    }
+
+}
+
+/*====================================
+ Contact info section
+====================================*/
+
+.contact_info{
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+    margin: 0 90px;
+    padding: 36px 42px;
+    position: absolute;
+    top: 299px;
+
+     
+    @include breakpoint(tablet){
+        margin: 0 24px;
+        top: 192px;
+        right: 12%;
+        left: 12%;
+    }
+
+    @include breakpoint(mobile){
+        width: 93%;
+        margin: 10px;
+        padding: 16px 22px;
+        top: 183px;
+        right: 0;
+        left: 0;
+    }
+
+    .location{
+        display: flex;
+
+        @include breakpoint(tablet){
+            flex-direction: column;
+        }
+
+        @include breakpoint(mobile){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .coordonee{
+            max-width: 339px;
+            margin-right: 175px;
+
+            
+            @include breakpoint(tablet){
+                max-width: 100%;
+                margin-right: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 0;
+            }
+
+            @include breakpoint(mobile){
+                display: flex;
+                flex-direction: column;
+            }
+
+            h3{
+                font-family: 'sf-black';
+
+                @include breakpoint(tablet){
+                    grid-column: 1 / 3;
+                    order: 1;
+                }
+            }
+
+            div{
+                margin-bottom: 20px;
+            }
+
+            .phone_numbers{
+                @include breakpoint(tablet){
+                    order: 1;
+                }
+            }
+
+            .adress{
+                @include breakpoint(tablet){
+                    order: 4;
+                    grid-column: 1 / 3;
+                    justify-self: center;
+                    text-align: center;
+                    padding: 0 36px;
+                }
+                
+            }
+
+            .email{
+                @include breakpoint(tablet){
+                    order: 3;
+                    align-self: end;
+                }
+
+                @include breakpoint(mobile){
+                    align-self: center;
+                }
+
+                @include breakpoint(mobile-s){
+                    width: 100px;
+                    font-size: 11px;
+                }
+
+                p{
+                    @include breakpoint(mobile){
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .phone_numbers, .email{
+                @include breakpoint(mobile){
+                    padding: 0 36px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .title_blue{
+            position: absolute;
+            z-index: 2;
+        }
+
+        &:last-child{
+            margin-top: 40px;
+        }
+    }
+
+    .map{
+        border-radius: 7px;
+        box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+        width:637px;
+        height:301px;
+        margin-top: 45px;
+
+        iframe{
+            width:637px;
+            height:301px;
+        }
+
+        @include breakpoint(tablet){
+            width: 457px;
+            margin: 45px auto;
+
+            iframe{
+                width: 457px;
+            }
+        }
+
+        @include breakpoint(mobile){
+            display: none;
+        }
+    }
+
+    .phone_numbers{
+        margin-top: 49px;
+        
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*====================================
+ Form section
+====================================*/
+.form{
+    text-align: center;
+    margin: 893px auto 0;
+
+    .section_title{
+        margin-bottom: 27px;
+    }
+
+    @include breakpoint(tablet){
+        margin: 112vh auto 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin: 156vh auto 0;
+    }
+
+    @include breakpoint(mobile){
+        margin: 847px auto 0;
+        padding: 0px 12px;
+    }
+
+    
+
+    .form-contact{
+        margin-bottom: 31px;
+        font-family: 'sf-light';
+        
+    }
+
+    textarea,input{
+        border: 1px solid #000000;
+        border-radius: 7px;
+        padding: 31px;
+        font-size: 18px;
+        letter-spacing: 1.29px;
+        line-height: 21px;
+
+        @include breakpoint(mobile){
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        &::-webkit-input-placeholder{
+            color: #000000;
+            font-family: 'sf-light';
+            font-size: 18px;
+            letter-spacing: 1.29px;
+            line-height: 21px;
+
+            @include breakpoint(mobile){
+                font-size: 15px;
+            }
+           
+        }
+
+        &::-moz-placeholder{
+            color: #000000;
+            font-family: 'sf-light';
+            font-size: 18px;
+            letter-spacing: 1.29px;
+            line-height: 21px;
+
+            @include breakpoint(mobile){
+                font-size: 15px;
+            }
+           
+        }
+
+        &:-ms-input-placeholder{
+            color: #000000;
+            font-family: 'sf-light';
+            font-size: 18px;
+            letter-spacing: 1.29px;
+            line-height: 21px;
+
+            @include breakpoint(mobile){
+                font-size: 15px;
+            }
+           
+        }
+
+        &::-ms-input-placeholder{
+            color: #000000;
+            font-family: 'sf-light';
+            font-size: 18px;
+            letter-spacing: 1.29px;
+            line-height: 21px;
+
+            @include breakpoint(mobile){
+                font-size: 15px;
+            }
+           
+        }
+
+        &::placeholder{
+            color: #000000;
+            font-family: 'sf-light';
+            font-size: 18px;
+            letter-spacing: 1.29px;
+            line-height: 21px;
+
+            @include breakpoint(mobile){
+                font-size: 15px;
+            }
+           
+        }
+
+        &:focus{
+            &::-webkit-input-placeholder{
+                opacity: 0;
+            }
+            &::-moz-placeholder{
+                opacity: 0;
+            }
+            &:-ms-input-placeholder{
+                opacity: 0;
+            }
+            &::-ms-input-placeholder{
+                opacity: 0;
+            }
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+
+    input{
+        width: 922px;
+        height: 80px;
+       
+        @include breakpoint(tablet){
+            width: 600px;
+            height: 70px;
+           
+        }
+
+        @include breakpoint(mobile){
+            width: 300px;
+            height: 49px;
+           
+        }
+
+       
+    }
+
+    textarea{
+        width: 922px;
+        height: 290px;
+
+        @include breakpoint(tablet){
+            width: 600px;
+            height: 150px;
+        }
+
+
+        @include breakpoint(mobile){
+            width: 300px;
+            height: 142px;
+           
+        }
+    }
+
+
+}

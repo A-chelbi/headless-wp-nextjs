@@ -1,0 +1,29 @@
+{
+    "scripts": {
+      "compile:css": "sass css/index.scss dist/index.css",
+      "compile:js": "browserify -p tsify js/index.ts --debug | exorcist dist/index.js.map > dist/index.js",
+      "compile": "sass css/index.scss dist/index.css && browserify -p tsify js/index.ts --debug | exorcist dist/index.js.map > dist/index.js",
+      "watch:css": "sass --watch css/index.scss dist/index.css",
+      "watch:js": "watchify -p tsify js/index.ts -o \"exorcist dist/index.js.map > dist/index.js\" -d"
+    },
+    "dependencies": {
+      "@babel/core": "^7.11.6",
+      "@babel/preset-env": "^7.11.5",
+      "@splidejs/splide": "^2.4.14",
+      "@splidejs/splide-extension-grid": "^0.2.0",
+      "@splidejs/splide-extension-url-hash": "^0.1.5",
+      "babelify": "^10.0.0",
+      "browserify": "^16.5.1",
+      "exorcist": "^1.0.1",
+      "sass": "^1.26.11",
+      "tiny-slider": "^2.9.2",
+      "tsify": "^4.0.2",
+      "typescript": "^3.9.6",
+      "watchify": "^3.11.1"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.0.1",
+      "postcss": "^8.1.1"
+    }
+  }
+  

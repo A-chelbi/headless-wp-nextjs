@@ -1,0 +1,124 @@
+.general_template{
+    padding-top: 158px;
+    margin: 0 auto;
+    max-width: 1212px;
+    position: relative;
+
+    @include breakpoint(tablet){
+        padding-top: 87px;
+    }
+
+    @include breakpoint(mobile){
+        padding-top: 89px;
+    }
+    
+
+    .hero{
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .general_template__content{
+        margin: 0 33px 141px;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 7px;
+        box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+
+        @include breakpoint(tablet){
+            margin: 0 33px 57px;
+            padding: 26px;
+        }
+
+        @include breakpoint(mobile){
+            margin: 0 21px 55px;
+        }
+    }
+
+    .general_template__content_with-hero{
+        margin: 278px 33px 141px;
+
+        @include breakpoint(tablet){
+            margin: 142px 33px 55px;
+        }
+
+        @include breakpoint(mobile){
+            margin: 62px 21px 55px;
+        }
+    }
+    
+    .section-title{
+        margin-bottom: 20px;
+    }
+
+    .social_links{
+        display: flex;
+        font-family: 'sf-light';
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        margin-top: 63px;
+        padding-bottom: 10px;
+
+        li{
+            margin-right: 34px;
+        }
+    }
+
+    .article_date{
+        color: #6D7278;
+        font-family: 'sf-light';
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 16px;
+    }
+
+    .post_title{
+        font-size: 25px;
+        line-height: 29.83px;
+        margin-bottom: 11px;
+    }
+
+}
+
+.general_template__contact{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 154px 80px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    @include breakpoint(tablet){
+        padding: 80px 55px 80px 23px;
+    }
+
+    @include breakpoint(mobile){
+        flex-wrap: wrap;
+        padding: 38px 18px 48px 19px;
+    }
+
+    h1{
+        margin-right: 150px;
+
+        @include breakpoint(tablet){
+            margin-right: 49px;
+        }
+
+        @include breakpoint(mobile){
+            margin: 0 auto 36px;
+        }
+    }
+
+    .cta_right{
+        text-align: center;
+    }
+
+    .btn{
+        padding: 21px 31px;
+    }
+    
+}

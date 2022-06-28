@@ -1,0 +1,426 @@
+/*====================================
+ Team hero section
+====================================*/
+.team_hero_section{
+    position: relative;
+
+    img{
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        height: 445px;
+        width: 100%;
+
+        @include breakpoint(mobile){
+            height: 300px;
+        }
+    }
+
+    .hero_content{
+        padding: 283px 444px 0 90px;
+        
+        @include breakpoint(tablet){
+            padding: 237px 126px 0 46px;
+        }
+
+        @include breakpoint(mobile){
+            padding: 185px 52px 0 21px;
+        }
+    
+        .hero_inner{
+            background-color: #ffffff;
+            border-radius: 7px;
+            box-shadow: -1px 0 4px 3px rgba(0, 0, 0, 0.08);
+            padding: 36px 41px 22px 55px;
+
+            @include breakpoint(mobile){
+                padding: 20px 14px;
+            }
+
+            p{
+                @include breakpoint(mobile){
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/*====================================
+ Team managers section
+====================================*/
+.team_managers_section{
+    margin: 130px 5%;
+
+    @include breakpoint(tablet){
+        margin: 74px 5%;
+    }
+
+    .managers_intro{
+        display: flex;
+        justify-content: space-around;
+        //gap: 49px;
+        margin-right: 5%;
+
+        @include breakpoint(mobile){
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+            text-align: right;
+            margin-right: 49px;
+
+            @include breakpoint(mobile){
+                text-align: center;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        p{
+            max-width: 723px;
+        }
+    }
+
+    .managers_list{
+        display: flex;
+        justify-content: center;
+        //gap: 61px;
+        margin-top: 61px;
+        margin-bottom: 81px;
+
+        @include breakpoint(tablet){
+            flex-direction: column;
+            margin: 60px auto;
+            align-items: center;
+        }
+
+        @include breakpoint(mobile){
+            margin: 29px auto;
+        }
+
+        .manager_card{
+            max-width: 400px;
+
+            @include breakpoint(mobile){
+                max-width: 300px;
+            }
+
+            .manager_image{
+                border-radius: 7px;
+                width: 400px;
+                height: 400px;
+
+                @include breakpoint(mobile){
+                    width: 300px;
+                    height: 300px;
+                }
+
+                img{
+                    overflow: hidden;
+                    -o-object-fit: cover;
+                        object-fit: cover;
+                    width: 100%;    
+                }
+            }
+
+            h3{
+                font-family: 'sf-semibold';
+                font-size: 22px;
+                line-height: 26px;
+                text-align: center;
+                margin-top: 14px;
+
+                @include breakpoint(mobile){
+                    font-size: 17px;
+                    text-align: left;
+                }
+            }
+
+            .manager_position{
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                //gap: 39px;
+
+                @include breakpoint(mobile){
+                    justify-content: space-between;
+                }
+
+                h4.title_blue{
+                    font-family: 'sf-light';
+                    font-size: 20px;
+                    line-height: 23.87px;
+                    text-align: center;
+                    text-transform: initial;
+                    margin-right: 39px;
+
+                    @include breakpoint(mobile){
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                }
+            }
+
+            &:first-child{
+                margin-right: 61px;
+
+                @include breakpoint(tablet){
+                    margin-right:0;
+                    margin-bottom: 61px;
+                } 
+            }
+        }   
+
+        .manager_bio{
+            @include breakpoint(mobile){
+                display: none;
+            }
+
+            &.show{
+                display: block;
+            }
+        }
+
+        .toggle_bio{
+            .bio{
+                text-decoration: underline;
+                color: #E70055;
+            }
+
+            &[aria-expanded="false"]{
+                .show{
+                    display: inline;
+                }
+    
+                .hide{
+                    display: none;
+                }
+            }
+
+            &[aria-expanded="true"]{
+                .show{
+                    display: none;
+                }
+    
+                .hide{
+                    display: inline;
+                }
+            }
+        }
+
+    }
+
+}
+
+.cta_center{
+    text-align: center;
+    margin: auto;
+}
+
+/*====================================
+ Team members section
+====================================*/
+.team_members_section{
+    margin: 130px 0 0;
+    background-color: #F9FBFF;
+    padding: 58px 0 130px;
+
+    @include breakpoint(mobile){
+        margin: 81px 0 0;
+        padding: 27px 0 39px;
+    }
+
+
+    .team_members_intro{
+        display: flex;
+        justify-content: space-around;
+       // gap: 49px;
+        margin: 0 10%;
+
+        @include breakpoint(mobile){
+            flex-direction: column;
+            //gap: 20px;
+        }
+
+        h1{
+            text-align: right;
+            width: 47%;
+            padding-left: 10%;
+            margin-right: 49px;
+
+            @include breakpoint(mobile){
+                width: 100%;
+                text-align: center;
+                padding-left: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .team_slider{
+        margin: 2% 6%;
+
+        @include breakpoint-reverse(xx-large){
+            margin: 2% 9%;
+        }
+    }
+
+    .team_member_card{
+        position: relative;
+
+        .team_member_image{
+            background-image: linear-gradient(180deg, rgba(216, 216, 216, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+            border-radius: 7px;
+            height: 300px;
+            width: 300px; 
+
+            @include breakpoint(mobile){
+                width: 280px; 
+                margin: auto;
+            }
+
+            img{
+                position: absolute;
+                z-index: -1;
+                overflow: hidden;
+                -o-object-fit: cover;
+                    object-fit: cover;
+                height: 300px;
+                width: 300px; 
+                border-radius: 7px;
+
+                @include breakpoint(mobile){
+                    width: 280px; 
+                }
+            }
+        }
+
+        .team_member_card_footer{
+            padding: 5% 3%;
+
+            @include breakpoint(mobile){
+                padding: 5% 17%;
+            }
+
+            h3{
+                font-family: 'sf-semibold';
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 14px;
+
+                @include breakpoint(mobile){
+                    font-size: 17px;
+                    line-height: 14px;
+                }
+            }
+
+            h4{
+                font-size: 20px;
+                line-height: 23.87px;
+                text-transform: none;
+
+                @include breakpoint(mobile){
+                    font-size: 14px;
+                    line-height: 13px;
+                }
+            }
+        } 
+    }
+
+    .controls{
+        position: relative;
+        text-align: center;
+        
+        li{
+            display: block;
+            position: absolute;
+            top: 50%;
+            height: 13px;
+            line-height: 60px;
+            margin-top: -42px;
+            padding: 0 15px;
+            cursor: pointer;
+
+            &[aria-disabled="true"]{
+                opacity: 0.3340541294642857;
+                cursor: default;
+            }
+        }
+
+        svg{
+            fill: #E70055;
+        }
+
+        .prev {
+            left: 0;
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+        .next {
+            right: 87.5%;
+
+            @include breakpoint(tablet){
+                right: 0;
+            }
+        }
+    }
+
+    .tns-nav{
+        text-align: left;
+        margin-left: 5%;
+
+        @include breakpoint(tablet){
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+
+}
+
+/*====================================
+ Team contact section
+====================================*/
+.team_contact_section{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 234px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 70px;
+
+    @include breakpoint(tablet){
+        padding: 80px 55px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include breakpoint(mobile){
+        flex-wrap: wrap;
+        padding: 38px 18px 48px 19px;
+    }
+
+    .team_contact_content{
+        width: 60%;
+
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+
+        @include breakpoint(mobile){
+            margin: 0 auto 36px;
+        }
+    }
+
+    .cta_right{
+        text-align: center;
+    }
+    
+}
